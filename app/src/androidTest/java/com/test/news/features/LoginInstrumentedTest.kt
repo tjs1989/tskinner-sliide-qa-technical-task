@@ -1,14 +1,11 @@
-package com.test.news.features.login.presentation
+package com.test.news
 
-import androidx.test.espresso.Espresso.onView
-import androidx.test.espresso.matcher.ViewMatchers.isRoot
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import androidx.test.rule.ActivityTestRule
-import com.test.news.R
-import com.test.news.userInterations.clearAndEnterTextInField
-import com.test.news.userInterations.tapOnButton
+import com.test.news.common.NewsScreenConstants.NEWS_TEXT_VIEW_HEADER
+import com.test.news.features.login.presentation.LoginActivity
 import com.test.news.rules.AnimationsRule
-import com.test.news.viewActions.ViewActions.waitForResourceToDisplay
+import com.test.news.userInterations.*
 import org.junit.Rule
 import org.junit.Test
 import org.junit.runner.RunWith
@@ -17,13 +14,14 @@ import org.junit.runner.RunWith
 class LoginInstrumentedTest {
 
     @get:Rule
-    var activityTestRule = ActivityTestRule<LoginActivity>(LoginActivity::class.java)
+    var activityTestRule = ActivityTestRule<LoginActivity>(
+        LoginActivity::class.java)
 
     @get:Rule
     val animationsRule = AnimationsRule()
 
     @Test
-    fun shouldLoginWithValidCredentials() {
+    fun loginWithValidCredentials() {
         clearAndEnterTextInField(
             R.id.editTextUserName,
             VALID_USER_NAME
@@ -34,10 +32,10 @@ class LoginInstrumentedTest {
         )
         tapOnButton(R.id.buttonLogin)
 
+        waitForResourceToDisplay(R.id.imageView)
 
-        // TODO assert login when ready
-//        assertTrue(activityTestRule.activity.isFinishing)
-        onView(isRoot()).perform(waitForResourceToDisplay(R.id.imageView, 5000));
+        assertDisplayedTextInTextView(NEWS_TEXT_VIEW_HEADER)
+
     }
 
     companion object {
