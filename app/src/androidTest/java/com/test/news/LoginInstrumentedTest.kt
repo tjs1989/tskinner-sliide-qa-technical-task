@@ -1,11 +1,10 @@
-package com.test.news
-
 import androidx.test.espresso.Espresso.onView
 import androidx.test.espresso.action.ViewActions.clearText
 import androidx.test.espresso.action.ViewActions.click
 import androidx.test.espresso.action.ViewActions.typeText
 import androidx.test.espresso.matcher.ViewMatchers.withId
 import androidx.test.rule.ActivityTestRule
+import com.test.news.R
 import com.test.news.features.login.presentation.LoginActivity
 import junit.framework.Assert.assertTrue
 import org.junit.Rule
