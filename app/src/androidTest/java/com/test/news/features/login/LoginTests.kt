@@ -1,4 +1,4 @@
-package com.test.news.features
+package com.test.news.features.login
 
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import androidx.test.rule.ActivityTestRule
@@ -8,7 +8,7 @@ import com.test.news.common.LoginScreenConstants.VALID_USER_PASSWORD
 import com.test.news.common.NewsScreenConstants.NEWS_TEXT_VIEW_HEADER
 import com.test.news.features.login.presentation.LoginActivity
 import com.test.news.rules.AnimationsRule
-import com.test.news.userInterations.assertDisplayedTextInTextView
+import com.test.news.userInterations.assertTextInOuterParentTextView
 import com.test.news.userInterations.clearAndEnterTextInField
 import com.test.news.userInterations.tapOnButton
 import com.test.news.userInterations.waitForResourceToDisplay
@@ -41,7 +41,7 @@ class LoginTests {
         )
         tapOnButton(R.id.buttonLogin)
         waitForResourceToDisplay(R.id.imageView)
-        assertDisplayedTextInTextView(NEWS_TEXT_VIEW_HEADER)
+        assertTextInOuterParentTextView(R.id.action_bar, R.id.action_bar_container, NEWS_TEXT_VIEW_HEADER)
     }
 
     @Test

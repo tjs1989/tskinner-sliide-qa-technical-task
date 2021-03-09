@@ -16,7 +16,7 @@ import dagger.android.AndroidInjection
 import dagger.android.DispatchingAndroidInjector
 import dagger.android.HasAndroidInjector
 import kotlinx.android.synthetic.main.activity_news.*
-import java.lang.IllegalStateException
+
 import java.lang.NullPointerException
 import javax.inject.Inject
 

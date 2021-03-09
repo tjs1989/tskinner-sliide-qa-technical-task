@@ -40,7 +40,7 @@
             <EditText
                 android:id="@+id/editTextUserName"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="36dp"
                 android:hint="@string/login_user_name_hint"
                 android:inputType="textEmailAddress" />
         </com.google.android.material.textfield.TextInputLayout>

@@ -66,5 +66,7 @@ dependencies {
 
     androidTestImplementation deps.espresso.junit_ext
     androidTestImplementation deps.espresso.core
+    androidTestImplementation deps.espresso.contrib
+    androidTestImplementation deps.espresso.uiautomator
     androidTestImplementation deps.test_rules
 }
