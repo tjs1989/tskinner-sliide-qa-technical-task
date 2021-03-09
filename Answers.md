@@ -43,7 +43,7 @@ API response for example. Espresso is loved for its speed but in this instance i
 
 Appium and Selenium solve this issue by having driver wait mechanisms (i.e. wait for element by id, css etc until condition x is met) which times out after a specified time. There's no out of the
 box solution in Espresso and idling resources are quite memory hungry. I have therefore opted for a custom View Action. It polls for the resource in question using UIAutomator with a specified timeout.
-I have therefore added this library into the Gradle build file, and created the class `ViewActions` in the `viewActions`package.
+I have added this library into the Gradle build file, and created the class `ViewActions` in the `viewActions`package.
 
 I just wanted to say that I really like the Gradle setup for adding dependencies, it is very well thought out and clean :)
 
@@ -51,13 +51,13 @@ Here are my answers to the tests, along with their associated scenarios.
 ### 1 - As a user I want to log in to the app - Automated Tests are in the `LoginTests` class
 
 #### Scenario 1 - user opens the android app first time (when not logged in yet)
-This scenario feels like an implicit check of the end to end flow of logging into the app for the first time, and seeing the news screen(Scenario 3).
+This scenario feels like an implicit check of the end to end flow of logging into the app for the first time, and seeing the news screen (Scenario 3).
 To that end assertions to check that the 3 elements are displayed before actions are conducted have been added to the successful login test (`loginWithValidCredentials`).
 
 This scenario can be covered using automated tests, and we can use a combination of virtual and real devices to assure that it works as expected.
 We should understand which Operating System versions are most used by our users, along with the most used devices. This will help us to target our testing a bit more, as opposed to testing blind.
-This data would help us to also understand what could be considered a best endeavours set of testing too. For example if only 1% of our users use a small screen size (One Plus 3 size or small for example)
-then we know that this does not need to be prioritised for each test run
+This data would help us to also understand what could be considered a best endeavours set of testing too. For example if only 1% of our users use a small screen size (One Plus 3 size or smaller for example)
+then we know that this does not need to be prioritised for each test run.
 
 #### Scenario 2 - user login failed
 As Per Scenario 1, I feel that this is best served with UI automation. I couldn't quite target the OS popups with the error messages though :( , so I have left a TODO in the code.
@@ -68,7 +68,7 @@ Because it goes through the UIAutomator layer, Appium has some methods out of th
 when we speak :)
 
 #### Scenario 3 - user login succeed (credentials provided below)
-As mentioned in Scenario 1, these 2 have been coupled together. Please therefore refer to the notes in Scenario 1 for the implementation details
+As mentioned in Scenario 1, these 2 have been coupled together. Please therefore refer to the notes in Scenario 1 for the implementation details.
 
 #### Scenario 4 - user opens app next time (when previously logged in)
 The app appears to have 2 different behaviours depending on the type of close and open operation. If we soft close and open the app then the state doesn't change. The user is still on the news
