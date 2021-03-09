@@ -10,6 +10,9 @@ Your app is written in Kotlin so I have decided to run with the flow and write K
 I am not sure if it is intentional (good idea for a test if it is) or if this is a legitimate issue. I would therefore like to point out that the username and password for the successful scenario 
 which is provided in the README is incorrect. As per the example test which you have provided the credentials should be `user1/password`, as opposed to `password/password`.
 
+### Usage
+The tests are located in the classes within the `features` package, which is located at `app/src/androidTest/java/com.test.news/features`
+
 ### Framework Setup
 Google recommend that you disable device animations when using Espresso. It's something which always stokes the battle between native vs Appium for UI automation.
 I believe that the 2 can and in most cases should co-exist hand in hand. This is a topic of conversation which I look forward to having with you if I pass this stage :)
