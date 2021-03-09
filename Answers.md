@@ -109,7 +109,7 @@ The scenario mentions that a retry button should be present but I could not find
 From a manual perspective I'd be testing this scenario on smaller devices to check for word wrapping issues. This is also a common gotcha when translating apps into other languages.
 
 #### Scenario 3 - news image is clicked
-This has been covered by what I mentioned in scenario 1.
+This has been covered by what was mentioned in scenario 1.
 
 Please do not hesitate to get in touch if you have any further questions.
 
